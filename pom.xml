@@ -26,14 +26,14 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<issueManagement>
 		<url>https://github.com/ehabinl/crazy-rules/issues</url>
 		<system>GitHub Issues</system>
 	</issueManagement>
 
 	<scm>
-		<url>https://github.com/ehabinl/crazy-rules</url>
+		<url>https://github.com/ehabinl/crazy-rules.git</url>
 		<connection>scm:git:git@github.com:ehabinl/crazy-rules.git</connection>
 		<developerConnection>scm:git:git@github.com:ehabinl/crazy-rules.git</developerConnection>
 	</scm>
@@ -46,7 +46,6 @@
 			<id>ehabinl</id>
 		</developer>
 	</developers>
-
 
 	<dependencies>
 
@@ -61,6 +60,13 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+
 
 	</dependencies>
 
