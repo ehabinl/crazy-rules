@@ -24,6 +24,7 @@ Action is
     @Action(name = "Action 1")
 	public class ActionClass{
 		
+		@Inject
 		private String string;
 		
 		public void setString(String string) {
