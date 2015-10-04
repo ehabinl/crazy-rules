@@ -81,28 +81,25 @@ public class RulesExecutor {
 	}
 
 	/**
-	 * Execute all rules if all of them are evaluated to true
+	 * 
+	 * @return
 	 */
-	public void executeWhenAllEvaluated() {
+	public boolean executeWhenAllEvaluated() {
 
 		boolean result = true;
 		for (Rule rule : this.rules) {
-			LOG.info(String.format("Evaluate %s {%b}", rule.getName(), result));
 			result &= rule.evaluate();
-
+			LOG.info(String.format("Evaluate %s {%b}", rule.getName(), result));
 			if (!result) {
-				return;
+				return false;
 			}
 		}
 
 		for (Rule rule : this.rules) {
 			LOG.info(String.format("Execute %s {%b}", rule.getName(), result));
-			result &= rule.execute();
-
-			if (!result) {
-				return;
-			}
 		}
+
+		return true;
 	}
 
 	/**

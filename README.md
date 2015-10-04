@@ -35,7 +35,7 @@ Action is
     
 Rule is
 
-    @Rule(name = "Rule 1", conditions = {Condition.class}, actions = { Action.class })
+    @Rule(name = "Rule 1", conditions = { Condition.class }, actions = { Action.class })
 	public class Rule {
 	}
 
