@@ -45,7 +45,7 @@ import com.softfeeder.rules.core.lib.condition.ConditionProxy;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public class RuleProxy implements InvocationHandler {
@@ -118,7 +118,7 @@ public class RuleProxy implements InvocationHandler {
 	 * 
 	 * @param context
 	 * @param rule
-	 * @return
+	 * @return new rule proxy
 	 * @throws InvalidConditionDefinition
 	 * @throws InvalidActionDefinition
 	 * @throws InvalidRuleDefinition
@@ -135,7 +135,7 @@ public class RuleProxy implements InvocationHandler {
 	 * @param proxy
 	 * @param method
 	 * @param args
-	 * @return
+	 * @return invoker return value
 	 * @throws Throwable
 	 */
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -170,7 +170,7 @@ public class RuleProxy implements InvocationHandler {
 
 	/**
 	 * @param conjunction
-	 * @return
+	 * @return evaluation result
 	 */
 	private boolean evaluate(Conjunction conjunction) {
 		boolean result = true;
@@ -191,7 +191,7 @@ public class RuleProxy implements InvocationHandler {
 
 	/**
 	 * 
-	 * @return
+	 * @return execution result
 	 */
 	private boolean execute() {
 		boolean result = true;
@@ -202,7 +202,7 @@ public class RuleProxy implements InvocationHandler {
 	}
 
 	/**
-	 * @return
+	 * @return class annotation
 	 */
 	private com.softfeeder.rules.annotation.Rule getAnnotation() {
 		return target.getClass().getAnnotation(com.softfeeder.rules.annotation.Rule.class);

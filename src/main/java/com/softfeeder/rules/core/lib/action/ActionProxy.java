@@ -43,7 +43,7 @@ import com.softfeeder.rules.core.lib.condition.Condition;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public class ActionProxy implements InvocationHandler {
@@ -92,7 +92,7 @@ public class ActionProxy implements InvocationHandler {
 	/**
 	 * @param context
 	 * @param action
-	 * @return
+	 * @return new action
 	 * @throws InvalidActionDefinition
 	 */
 	public static com.softfeeder.rules.core.lib.action.Action asAction(final RuleContext context, final Object action)
@@ -107,7 +107,7 @@ public class ActionProxy implements InvocationHandler {
 	 * @param proxy
 	 * @param method
 	 * @param args
-	 * @return
+	 * @return invoker return value
 	 * @throws Throwable
 	 */
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -141,7 +141,7 @@ public class ActionProxy implements InvocationHandler {
 	}
 
 	/**
-	 * @return
+	 * @return compare to method
 	 */
 	private Method getCompareToMethod() {
 		Method[] methods = getMethods();
@@ -155,7 +155,7 @@ public class ActionProxy implements InvocationHandler {
 
 	/**
 	 * @param args
-	 * @return
+	 * @return execution result
 	 * @throws InvocationTargetException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -173,14 +173,14 @@ public class ActionProxy implements InvocationHandler {
 	}
 
 	/**
-	 * @return
+	 * @return class methods
 	 */
 	private Method[] getMethods() {
 		return target.getClass().getMethods();
 	}
 
 	/**
-	 * @return
+	 * @return class annotaions
 	 */
 	private Action getAnnotation() {
 		return target.getClass().getAnnotation(Action.class);
@@ -188,7 +188,7 @@ public class ActionProxy implements InvocationHandler {
 
 	/**
 	 * @param otherRule
-	 * @return
+	 * @return compare to value
 	 * @throws Exception
 	 */
 	private int compareTo(final Condition otherRule) {

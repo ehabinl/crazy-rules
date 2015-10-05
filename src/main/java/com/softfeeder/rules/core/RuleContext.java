@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public class RuleContext {
@@ -39,7 +39,7 @@ public class RuleContext {
 	/**
 	 * 
 	 * @param key
-	 * @return
+	 * @return value
 	 */
 	public Object getValue(final String key) {
 		return context.get(key);

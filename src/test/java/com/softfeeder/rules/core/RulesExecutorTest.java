@@ -37,7 +37,7 @@ import com.softfeeder.rules.core.exception.EngineConstructionFailure;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public class RulesExecutorTest {

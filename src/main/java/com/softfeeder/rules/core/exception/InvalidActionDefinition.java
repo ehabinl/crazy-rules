@@ -26,7 +26,7 @@ package com.softfeeder.rules.core.exception;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public class InvalidActionDefinition extends Exception {

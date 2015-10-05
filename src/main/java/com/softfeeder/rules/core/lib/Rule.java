@@ -32,7 +32,7 @@ import com.softfeeder.rules.core.lib.condition.Condition;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public interface Rule {

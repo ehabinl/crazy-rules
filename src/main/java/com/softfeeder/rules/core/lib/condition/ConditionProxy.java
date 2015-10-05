@@ -40,7 +40,7 @@ import com.softfeeder.rules.core.exception.InvalidConditionDefinition;
 /**
  * 
  * @author Ehab Al-Hakawati
- * @date 04-Oct-2015
+ * @since 04-Oct-2015
  *
  */
 public class ConditionProxy implements InvocationHandler {
@@ -82,9 +82,8 @@ public class ConditionProxy implements InvocationHandler {
 	/**
 	 * @param context
 	 * @param condition
-	 * @return
+	 * @return new condition proxy
 	 * @throws InvalidConditionDefinition
-	 * @throws
 	 */
 	public static com.softfeeder.rules.core.lib.condition.Condition asCondition(final RuleContext context,
 			final Object condition) throws InvalidConditionDefinition {
@@ -99,7 +98,7 @@ public class ConditionProxy implements InvocationHandler {
 	 * @param proxy
 	 * @param method
 	 * @param args
-	 * @return
+	 * @return invoker return value
 	 * @throws Throwable
 	 */
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -133,7 +132,7 @@ public class ConditionProxy implements InvocationHandler {
 	}
 
 	/**
-	 * @return
+	 * @return compare method
 	 */
 	private Method getCompareToMethod() {
 		Method[] methods = getMethods();
@@ -148,7 +147,7 @@ public class ConditionProxy implements InvocationHandler {
 	/**
 	 * @param args
 	 * @param conjunction
-	 * @return
+	 * @return evaluation result
 	 * @throws InvocationTargetException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -170,14 +169,14 @@ public class ConditionProxy implements InvocationHandler {
 	}
 
 	/**
-	 * @return
+	 * @return class methods
 	 */
 	private Method[] getMethods() {
 		return target.getClass().getMethods();
 	}
 
 	/**
-	 * @return
+	 * @return annotation
 	 */
 	private Condition getAnnotation() {
 		return target.getClass().getAnnotation(Condition.class);
@@ -185,7 +184,7 @@ public class ConditionProxy implements InvocationHandler {
 
 	/**
 	 * @param otherRule
-	 * @return
+	 * @return compare to value
 	 * @throws Exception
 	 */
 	private int compareTo(final com.softfeeder.rules.core.lib.condition.Condition otherRule) {
