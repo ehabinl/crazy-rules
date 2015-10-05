@@ -23,7 +23,14 @@ Action is
 
     @Action(name = "Action 1")
 	public class ActionClass{
-
+		
+		@Inject
+		private String string;
+		
+		public void setString(String string) {
+			this.string = string;
+		}
+		
 		@Do
 		public boolean action1() {
 			return true;
@@ -31,6 +38,7 @@ Action is
 
 		@Do(priority = Priority.HIGHEST)
 		public void action2() {
+			System.out.println(this.string);
 		}
 		
 	}
@@ -44,5 +52,6 @@ Rule is
 And here we go
 
     RuleContext context = new RuleContext();
+    	context.addValue("string","test_string");
 	RulesExecutor executor = new RulesExecutor(context, new RuleClass());
 	executor.executeWhenAllEvaluated();
