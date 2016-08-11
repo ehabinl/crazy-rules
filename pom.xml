@@ -5,7 +5,7 @@
 
 	<groupId>com.softfeeder</groupId>
 	<artifactId>com.softfeeder.rules</artifactId>
-	<version>1.0-RC1</version>
+	<version>1.0-RC2</version>
 	<name>Crazy-Rules</name>
 	<description>
         Parent module for Softfeeder rule engine.
