@@ -25,7 +25,9 @@ package com.softfeeder.rules.core;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.softfeeder.rules.core.exception.EngineConstructionFailure;
 import com.softfeeder.rules.core.exception.InvalidActionDefinition;
@@ -42,7 +44,8 @@ import com.softfeeder.rules.core.lib.RuleProxy;
  */
 public class RulesExecutor {
 
-	private static final Logger LOG = Logger.getLogger(RulesExecutor.class.getName());
+	private static final Logger LOG = LoggerFactory.getLogger(RulesExecutor.class.getName());
+	
 	private final List<Rule> rules = new ArrayList<>();
 	private final RuleContext context;
 

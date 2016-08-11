@@ -25,11 +25,12 @@ package com.softfeeder.rules.core;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 
@@ -39,7 +40,7 @@ import org.apache.commons.beanutils.BeanUtils;
  */
 public class Utils {
 
-	private static final Logger LOG = Logger.getLogger(Utils.class.getName());
+	private static final Logger LOG = LoggerFactory.getLogger(Utils.class.getName());
 
 	/**
 	 * 

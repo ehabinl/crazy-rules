@@ -31,7 +31,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.softfeeder.rules.annotation.action.Action;
 import com.softfeeder.rules.annotation.action.Do;
@@ -48,7 +50,7 @@ import com.softfeeder.rules.core.lib.condition.Condition;
  */
 public class ActionProxy implements InvocationHandler {
 
-	private static final Logger LOG = Logger.getLogger(ActionProxy.class.getName());
+	private static final Logger LOG = LoggerFactory.getLogger(ActionProxy.class.getName());
 
 	private final List<Method> executeMethods;
 	private final RuleContext context;

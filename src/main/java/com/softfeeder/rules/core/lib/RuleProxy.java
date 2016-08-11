@@ -28,7 +28,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.softfeeder.rules.annotation.Rule;
 import com.softfeeder.rules.core.Conjunction;
@@ -50,7 +52,7 @@ import com.softfeeder.rules.core.lib.condition.ConditionProxy;
  */
 public class RuleProxy implements InvocationHandler {
 
-	private static final Logger LOG = Logger.getLogger(RuleProxy.class.getName());
+	private static final Logger LOG = LoggerFactory.getLogger(RuleProxy.class.getName());
 
 	private final RuleContext context;
 	private final Object target;
@@ -92,7 +94,7 @@ public class RuleProxy implements InvocationHandler {
 				}
 			}
 		} catch (InstantiationException | IllegalAccessException ex) {
-			LOG.severe("Construction failure");
+			LOG.error("Construction failure");
 		}
 
 		// -- add all actions
@@ -110,7 +112,7 @@ public class RuleProxy implements InvocationHandler {
 				}
 			}
 		} catch (InstantiationException | IllegalAccessException ex) {
-			LOG.severe("Construction failure");
+			LOG.error("Construction failure");
 		}
 	}
 

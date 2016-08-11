@@ -29,7 +29,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.softfeeder.rules.annotation.condition.Condition;
 import com.softfeeder.rules.core.Conjunction;
@@ -45,7 +47,7 @@ import com.softfeeder.rules.core.exception.InvalidConditionDefinition;
  */
 public class ConditionProxy implements InvocationHandler {
 
-	private static final Logger LOG = Logger.getLogger(ConditionProxy.class.getName());
+	private static final Logger LOG = LoggerFactory.getLogger(ConditionProxy.class.getName());
 
 	private final Set<Method> evaluateMethods;
 	private final RuleContext context;
