@@ -1,4 +1,4 @@
-Crazy-Rules!
+Crazy-Rules! ![alt Travis-CI](https://travis-ci.org/ehabinl/crazy-rules.svg?branch=master)
 ===================
 Because rules should be as easy as 1, 2, 3
 
