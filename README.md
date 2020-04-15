@@ -1,5 +1,3 @@
-Crazy-Rules!  [![alt Travis-CI](https://travis-ci.org/ehabinl/crazy-rules.svg?branch=master)](https://travis-ci.org/ehabinl/crazy-rules)
-===================
 Because rules should be as easy as 1, 2, 3
 
 Condition is 
